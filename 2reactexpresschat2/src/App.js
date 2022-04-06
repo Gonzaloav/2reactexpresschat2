@@ -3,7 +3,6 @@ import './App.css';
 import Login from './componets/Login/Login.jsx';
 
 
-
 const [password, setPassword] = useState ("");
 const [id, setId] = useState ("");
 
