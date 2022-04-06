@@ -7,9 +7,9 @@ const [password, setPassword] = useState ("");
 const host = "https://web-develop-react-express-chat.herokuapp.com";
 const data = {"userName":"Marias", "password":"abc123"}
 
-async function post(host, data) {
+async function post(url, data) {
     const response = await fetch(
-        host,"/login/"
+        url,
         {
             method: 'POST',
             body: data,
