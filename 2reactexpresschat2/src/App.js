@@ -2,7 +2,7 @@
 import './App.css';
 import Login from './components/Login/Login.jsx';
 import Menssage from './components/Menssage/Menssage';
-
+import SendMessages from './components/SendMenssages/SendMenssages';
 
 function App() {
   
@@ -15,7 +15,8 @@ function App() {
         <h1> Chat clase </h1>
         <Login/>
         <Menssage/>
-
+        <SendMessages/>
+        
     
     </>
   );

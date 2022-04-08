@@ -37,7 +37,7 @@ function getMessage() {
 
 return (
     <>
-        <h2> Contenido del Mensaje: </h2>
+        <h2> Contenido Mensaje:</h2>
         <button onClick={getMessage}> Recibir Mensajes</button>
     </>
 )
