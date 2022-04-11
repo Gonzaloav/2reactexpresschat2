@@ -1,9 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, } from 'react';
 
-function Messages({ id, password }) {
+function Message({ id, password }) {
 
     //const [token, setToken] = useState("");
-    const [messages, setMessages] = useState("");
+    const [message, setMessage] = useState("");
     const token = authToken(id, password);
     const [timer, setTimer] = useState(null);
     const host = "https://web-develop-react-express-chat.herokuapp.com"
@@ -23,7 +23,7 @@ function Messages({ id, password }) {
 /**useInterval:primer parametro será una función que queramos que se ejecute 
  * en el tiempo que queramos */
             if ( timer ) clearInterval(timer);
-            const timerId = setInterval(()=>getMessages(token), 1000)
+            const timerId = setInterval(()=>getMessage(token), 1000)
             setTimer(timerId)
         },
         [id, password]
@@ -41,9 +41,9 @@ function Messages({ id, password }) {
         const data = await response.json();
         return data;
     }
-    function getMessages(token) {
-        authGet(host + "/messages/", token).then(
-            data => setMessages(data.map(
+    function getMessage(token) {
+        authGet(host + "/message/", token).then(
+            data => setMessage(data.map(
                 (item) => <li ><b>Id:</b> {item.source}- <b>Contenido:</b> {item.content}</li>
                 
             ))
@@ -54,11 +54,11 @@ function Messages({ id, password }) {
         <>
             <h2>Obtener todos los mensajes</h2>
             <p>{token}</p>
-            <button onClick={getMessages}>Obtener Mensajes</button>
-            <p>{messages}</p>
+            <button onClick={getMessage}>Obtener Mensajes</button>
+            <p>{message}</p>
         </>
     );
 
 }
 
-export default Messages;
+export default Message;
