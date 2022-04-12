@@ -13,6 +13,8 @@ function Register({ parentSetter }) {
         setPassword(ev.target.value);
     }
 
+    // Pasar al padre la contraseña y el usuario.
+    
     useEffect(
         ()=>{
             parentSetter({

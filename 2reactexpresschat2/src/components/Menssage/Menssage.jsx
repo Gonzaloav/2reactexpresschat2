@@ -17,11 +17,13 @@ function Message({ id, password }) {
         return `Basic ${base64token}`;
     }
 
-/* useEffect solo se ejecutará una vez por meter un array vacio */
+// useEffect solo se ejecutará una vez por meter un array vacio.
+
     useEffect(
         () => {
-/**useInterval:primer parametro será una función que queramos que se ejecute 
- * en el tiempo que queramos */
+/**useInterval: primer parametro será una función que queramos que se ejecute 
+ * en el tiempo que queramos, 1000 = 1seg. */
+
             if ( timer ) clearInterval(timer);
             const timerId = setInterval(()=>getMessage(token), 1000)
             setTimer(timerId)
@@ -41,6 +43,9 @@ function Message({ id, password }) {
         const data = await response.json();
         return data;
     }
+    // Convertir estos objetos en Html con un map, para recorrerlo y un return que saque una lista.
+    // IMPORTANTE
+     
     function getMessage(token) {
         authGet(host + "/message/", token).then(
             data => setMessage(data.map(
