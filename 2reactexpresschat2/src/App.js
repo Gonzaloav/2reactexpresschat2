@@ -16,7 +16,7 @@ function App() {
 function loginHandler() {
   setloggedIn(true);
 }
-// 
+//  Ocultar datos del padre, Menssages y SendMenssages linea 28 y 29  {loggedIn &&...
   return (
     <>
         <h1> Chat clase </h1>
@@ -24,8 +24,6 @@ function loginHandler() {
         <getLogin/>
         <Register parentSetter={setDatosPadre}/><br />
       <button onClick={loginHandler}>Register</button>
-
-      <!-- Ocultar datos del padre, Menssages y SendMenssages -->
 
       {loggedIn && <Messages id={datosPadre.id} password={datosPadre.password} />}
       {loggedIn && <SendMessages id={datosPadre.id} password={datosPadre.password} />}
