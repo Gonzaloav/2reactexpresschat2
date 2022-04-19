@@ -36,8 +36,8 @@ function Login({ results }) {
     return (
         <>
             <h2>Login de usuario</h2>
-            <input type="text" value={usuario} onChange={changeUsuario} /><br />
-            <input type="text" value={password} onChange={changePassword} /><br />
+            <input type="text" value={usuario} onChange={changeUsuario} placeholder="Nombre Usuario" /><br />
+            <input type="text" value={password} onChange={changePassword} placeholder="Password"/><br />
             <button onClick={login}>Login</button>
         </>
     );
