@@ -16,8 +16,8 @@ function GetLogin() {
 
     return (
         <>
-            <h2>Conseguir cuentas de usuario</h2>
-            <button onClick={dataToHTMLList}>Listado usuarios</button>
+            <h2> Cuentas de usuarios </h2>
+            <button onClick={dataToHTMLList}>Listado Usuarios</button>
             <ul>{usuarios}</ul>
         </>
     );

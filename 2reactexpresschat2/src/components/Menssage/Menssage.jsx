@@ -59,7 +59,7 @@ function Message({ id, password }) {
         <>
             <h2>Obtener todos los mensajes</h2>
             <p>{token}</p>
-            <button onClick={getMessage}>Obtener Mensajes</button>
+            <button onClick={getMessage}>Ver los Mensajes</button>
             <p>{message}</p>
         </>
     );
