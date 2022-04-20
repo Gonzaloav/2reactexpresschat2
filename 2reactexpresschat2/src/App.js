@@ -16,7 +16,7 @@ function App() {
 function loginHandler() {
   setloggedIn(true);
 }
-//  Ocultar datos del padre, Menssages y SendMenssages linea 28 y 29  {loggedIn ?...Con operador ternario
+//  Ocultar datos del padre, Menssages y SendMenssages linea 28 y 29  {loggedIn ?...Con operador condiciional
   return (
     <>
         <h1> Chat clase </h1>
@@ -25,15 +25,15 @@ function loginHandler() {
         <Register parentSetter={setDatosPadre}/><br />
       <button onClick={loginHandler}>Register</button>
   
-      {loggedIn ? <Messages id={datosPadre.id} password={datosPadre.password}/> : 
-      <SendMessages id={datosPadre.id} password={datosPadre.password} />
-       }  
+      {loggedIn && <Messages id={datosPadre.id} password={datosPadre.password} />}
+      {loggedIn && <SendMessages id={datosPadre.id} password={datosPadre.password} />}  
     </>
   );
 }
 
-/**  Operador condicional = {loggedIn && <Messages id={datosPadre.id} password={datosPadre.password} />}
-      {loggedIn && <SendMessages id={datosPadre.id} password={datosPadre.password} />}*/
+/**  Operador ternario = {loggedIn ? <Messages id={datosPadre.id} password={datosPadre.password} /> :
+ *   <SendMessages id={datosPadre.id} password={datosPadre.password} /> } 
+*/
  
  
 export default App;
