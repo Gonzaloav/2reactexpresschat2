@@ -28,8 +28,8 @@ function Register({ parentSetter }) {
     return (
     <>
         <h2>Registro</h2>
-        <input value={id} onChange={changeIdHandler} /><br/>
-        <input type="password" value={password} onChange={changePasswordHandler}/>
+        <input value={id} onChange={changeIdHandler} placeholder="Id"/><br/>
+        <input type="password" value={password} onChange={changePasswordHandler} placeholder="Password"/>
     </>
     );
 }

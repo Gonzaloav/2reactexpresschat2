@@ -45,7 +45,9 @@ function SendMessages({ id, password }) {
     return (
         <>
             <h2>Enviar mensaje</h2>
-            <textarea type="text" value={message} onChange={changeMessage} /><br />
+            <textarea type="text" value={message} onChange={changeMessage} 
+            placeholder="Escribe tu mensaje" /><br />
+            
             <button onClick={send}>Enviar</button>
         </>
     );
