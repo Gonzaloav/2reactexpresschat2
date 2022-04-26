@@ -1,8 +1,13 @@
+
+
+
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: right;
+  background-color: aquamarine;
   height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
